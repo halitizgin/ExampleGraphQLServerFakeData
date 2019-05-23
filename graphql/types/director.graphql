@@ -1,0 +1,27 @@
+"""
+Bu tip yönetmen bilgilerini tutmak için kullanılır.
+"""
+type Director{
+    id: ID!
+    name: String!
+    birth: Int!
+    movies: [Movie!]
+}
+
+type Query{
+    """
+    Bu komut ile tekil yönetmen almak için kullanılır.
+    """
+    director(id: ID!): Director!
+    """
+    Bu komut tüm yönetmenleri almak için kullanılır.
+    """
+    allDirectors: [Director!]
+}
+
+type Mutation{
+    """
+    Bu komut yönetmen eklemek için kullanılır.
+    """
+    addDirector(name: String!, birth: Int!): Director!
+}

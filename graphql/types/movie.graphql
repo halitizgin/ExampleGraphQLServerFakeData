@@ -1,0 +1,36 @@
+"""
+Bu tip film bilgilerini tutan bir türdür.
+"""
+type Movie{
+    id: ID!
+    name: String!
+    year: Int!
+    director: Director!
+    imdb: Int!
+    subject: String!
+}
+
+type Query{
+    """
+    Bu komut id ile tekil bir film almak için kullanılır.
+    """
+    movie(id: ID!): Movie!
+    """
+    Bu komut tüm filmleri almak için kullanılır.
+    """
+    allMovies: [Movie!]
+}
+
+type Mutation{
+    """
+    Bu komut yeni bir film eklemek için kullanılır.
+    """
+    addMovie(name: String!, year: Int!, directorId: ID!, imdb: Int!, subject: String): Movie!
+}
+
+type Subscription{
+    """
+    Bu komut yeni film eklendiğinde haberdar olmak için kullanılır.
+    """
+    movieAdded: Movie!
+}
