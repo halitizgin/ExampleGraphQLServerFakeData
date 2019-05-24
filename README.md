@@ -1,6 +1,6 @@
 # Başlamadan Önce
 Sisteminizde node.js kurulu olmalıdır.
-# Kuruluma İçin
+# Kurulum İçin
 
 Repoyu Clone yaptıktan sonra komut satırıyla ana klasörün içindeyken ```npm install``` komutunu çalıştırın ve gerekli bağımlı paketleri kurun.
 
